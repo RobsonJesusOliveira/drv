@@ -1,1 +1,1 @@
-##Simple program to download video from reddit
+## Simple program to download video from reddit
