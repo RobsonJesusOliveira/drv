@@ -13,7 +13,7 @@ def download_video(url):
     fallback = get_link(url)
     resp = requests.get(fallback, stream = True)
     file_size = int(resp.headers["Content-length"])
-    local_filename = "C:/Users/Robson Jesus/Downloads/" + url.split('/')[-2] + ".mp4"
+    local_filename = url.split('/')[-2] + ".mp4"
     bar = tqdm(total=file_size, unit='iB', unit_scale=True)
     with open(local_filename, "wb") as _file:
         for data in resp.iter_content(1024):
